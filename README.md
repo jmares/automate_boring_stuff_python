@@ -20,7 +20,7 @@ Read Februari 4, 2021
 
 ### Chapter 03: Functions
 
-Read Februari 10 - 11, 2021.
+Read Februari 10, 2021.
 
 Keyword arguments are often used for optional arguments. The print function has two optional arguments: `end` and `sep`.
 
@@ -53,4 +53,12 @@ print('cats', 'dogs', 'mice', sep=', ')
 
 # Output:
 # cats, dogs, mice
+```
+
+How to catch a keyboard interrupt exception caused by pressing CTRL-C?
+
+```python
+    ...
+    except KeyboardInterrupt:
+        sys.exit()
 ```
