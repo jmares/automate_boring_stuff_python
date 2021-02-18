@@ -131,8 +131,16 @@ I do not make every exercise, only the ones that I can't figure out right away.
 
 I now understand why a lot of people didn't make the *Coin Flip Streaks* project. I made it, but I didn't understand the outcome. I had no idea what to expect.
 
-I am not the only who commits his exercises from courses and books (including this one) to GitHub, but this specific project was missing with a lot of fellow learners. I found a solution on Gist, which had an impossible answer (> 140%) (see file `coinflips2.py`). Found some on StackOverFlow that were similar to mine, but still left me with questions. Then I found a solution on [StackExchange CodeReview](https://codereview.stackexchange.com/questions/247936/coin-flip-streaks-correct-streak-condition) (see file `coinflips3.py`). I am not going to go in to details about optimizing my code, PEP8, the pythonic way, and the statistics, but I immediately spotted the two mistakes that I and others made. 
+I am not the only who commits his exercises from courses and books (including this one) to GitHub, but this specific project was missing with a lot of fellow learners. I found a solution on Gist, which had an impossible answer (> 140%) (see file `coinflips2.py`). Found some on StackOverFlow that were similar to mine, but still left me with questions. Then I found a solution on [StackExchange CodeReview](https://codereview.stackexchange.com/questions/247936/coin-flip-streaks-correct-streak-condition) (see file `coinflips3.py`). I am not going to go into details about optimizing my code, PEP8, the pythonic way, and the statistics, but I immediately spotted the two mistakes that I and others made. 
 
 First mistake: it is not the numbers of streaks that you should count, but the sets of 100 tosses that have at least one streak of 6. As soon as you find a streak of 6 heads or tails: abort (`break`) the loop.
 
 Second mistake: if you are looking for a streak of 6 heads or tails pay attention to the initialization of the variable. I initialized the variable `streak` by setting it to 0 and I increased it untill it had reached 6. That is actually a streak of 7. So, either you set the initial value to 0 and count until it reaches 5, or you set the initial value to 1 and count until it reaches 6.
+
+### Chapter 05: Dictionaries and Structuring Data
+
+Read Februari 18 - 19, 2021.
+
+While they’re still not ordered and have no “first” key-value pair, dictionaries in Python 3.7 and later will remember the insertion order of their key-value pairs if you create a sequence value from them.
+
+Import the `pprint` module for pretyy printing a dictionary. Two methods: `pprint` and `pformat`.
