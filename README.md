@@ -144,3 +144,60 @@ Read Februari 18 - 19, 2021.
 While they’re still not ordered and have no “first” key-value pair, dictionaries in Python 3.7 and later will remember the insertion order of their key-value pairs if you create a sequence value from them.
 
 Import the `pprint` module for pretyy printing a dictionary. Two methods: `pprint` and `pformat`.
+
+### Chapter 06: Manipulating Strings
+
+Read Februari 22 - , 2021.
+
+A *raw string* completely ignores all escape characters and prints any backslash that appears in the string. Helpful if you have to printing Windows file paths.
+
+```python
+print(r'C:\Users\Al\Desktop\test\new')
+```
+
+Multiline string
+
+```python
+print('''Dear Alice,
+
+Eve's cat has been arrested for catnapping, cat burglary, and extortion.
+
+Sincerely,
+Bob''')
+```
+
+Single line comment starts with: **#**
+
+Multiline comment starts and ends with: **"""**
+
+Reversing the order in a string
+
+```python
+spam = 'abcdefghij'
+spam[::-1]
+```
+
+String interpolation & f-strings:
+
+```python
+print('My name is %s. I am %s years old.' % (name, age))
+print(f'My name is {name}. Next year I will be {age + 1}.”)
+```
+
+Some lesser know methods:
+
+- isalpha(): true if only letters and not blank
+- isalnum(): true if only letters and numbers, and not blank
+- isdecimal(): true, if only numeric characters and not blank
+- isspace(): true, if only spaces, tabes and newlines, and not blank
+- istitle(): true, if words start with uppercase letter followed by only lowercase letters, and not blank
+
+The `.partition()` method splits a string into the text before and after the separator string.
+
+```python
+>>> 'Hello, world!'.partition('w')
+('Hello, ', 'w', 'orld!')
+>>> 'Hello, world!'.partition('world')
+('Hello, ', 'world', '!') 
+```
+
