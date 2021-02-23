@@ -147,7 +147,7 @@ Import the `pprint` module for pretyy printing a dictionary. Two methods: `pprin
 
 ### Chapter 06: Manipulating Strings
 
-Read Februari 22 - , 2021.
+Read Februari 22 - 23, 2021.
 
 A *raw string* completely ignores all escape characters and prints any backslash that appears in the string. Helpful if you have to printing Windows file paths.
 
@@ -201,3 +201,4 @@ The `.partition()` method splits a string into the text before and after the sep
 ('Hello, ', 'world', '!') 
 ```
 
+I spent more time on the *Table Printer* project than anticipated, so I skipped the *Zombie Dice Bots* project (for now).
