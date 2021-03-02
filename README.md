@@ -202,3 +202,62 @@ The `.partition()` method splits a string into the text before and after the sep
 ```
 
 I spent more time on the *Table Printer* project than anticipated, so I skipped the *Zombie Dice Bots* project (for now).
+
+## PART II: Automating Tasks 
+
+### Chapter 07: Pattern Matching with regular Expressions 
+
+Read March 2, 2021
+
+Import the regular expresssion module
+
+```python
+import re
+```
+
+Create a RegEx object (use a raw string):
+
+```python
+phone_num_regex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # or
+phone_num_regex = re.compile(r'\d{3}-\d{3}-\d{4}')
+```
+
+Search for the pattern:
+
+```python
+mo = phone_num_regex.search('My number is 415-555-4242.')
+print('Phone number found: ' + mo.group())
+# Phone number found: 415-555-4242
+```
+
+The `search` method will only return the first occurence. If you want them all, use the `findall` method.
+
+Web-based regular expression tester: [pythex](https://pythex.org/)
+
+Grouping with ():
+
+```python
+phone_num_regex = re.compile(r'(\d{3})-(\d{3}-\d{4})')
+mo = phone_num_regex.search('My number is 415-555-4242.')
+print('Phone number found: ' + mo.group(1) + ' - ' + mo.group(2))
+# Phone number found: 415 - 555-4242
+```
+
+```python
+print(mo.groups())
+# ('415', '555-4242')
+```
+
+If you want to search for the following characters `.  ^  $  *  +  ?  {  }  [  ]  \  |  (  )` you will need to escape them in the raw string: `\$`
+
+Matching multiple groups with the pipe
+
+```python
+bat_regex = re.compile(r'Bat(man|woman|mobile|copter|boat)')
+```
+This regex will search for the first occurence of Batman, Batwoman, Batmobile, Batcopter or Batboat.
+
+```python
+bat_regex = re.compile(r'Bat(wo)?man')
+```
+This regex will search for Batman or Batwoman.
