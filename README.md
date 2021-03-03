@@ -257,7 +257,121 @@ bat_regex = re.compile(r'Bat(man|woman|mobile|copter|boat)')
 ```
 This regex will search for the first occurence of Batman, Batwoman, Batmobile, Batcopter or Batboat.
 
+Optional matching with a question mark
+
 ```python
 bat_regex = re.compile(r'Bat(wo)?man')
 ```
 This regex will search for Batman or Batwoman.
+
+Matching zero or more with the star
+
+```python
+bat_regex = re.compile(r'Bat(wo)*man')
+```
+
+Matching one or more with the plus
+
+```python
+bat_regex = re.compile(r'Bat(wo)+man')
+```
+
+Matching specific repititions with braces
+
+```python
+ha_regex = re.compile(r'(Ha){3}')
+```
+
+Greedy and nog-greedy matching. Python regex are greedy by default
+
+```python
+>>> greedyHaRegex = re.compile(r'(Ha){3,5}')
+>>> mo1 = greedyHaRegex.search('HaHaHaHaHa')
+>>> mo1.group()
+'HaHaHaHaHa'
+
+>>> nongreedyHaRegex = re.compile(r'(Ha){3,5}?')
+>>> mo2 = nongreedyHaRegex.search('HaHaHaHaHa')
+>>> mo2.group()
+'HaHaHa'
+```
+
+While `search()` will return a Match object of the first matched text in the searched string, the `findall()` method will return a list of strings if there are no groups in the regular expression. Otherwise it will return a list of tuples.
+
+```python
+>>> phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d') # has no groups
+>>> phoneNumRegex.findall('Cell: 415-555-9999 Work: 212-555-0000')
+['415-555-9999', '212-555-0000']
+
+>>> phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d)-(\d\d\d\d)') # has groups
+>>> phoneNumRegex.findall('Cell: 415-555-9999 Work: 212-555-0000')
+[('415', '555', '9999'), ('212', '555', '0000')]
+```
+
+Shorthand | Represents
+:---|:---
+\d | Any numeric digit from 0 to 9.
+\D | Any character that is not a numeric digit from 0 to 9.
+\w | Any letter, numeric digit, or the underscore character. (Think of this as matching “word” characters.)
+\W | Any character that is not a letter, numeric digit, or the underscore character.
+\s | Any space, tab, or newline character. (Think of this as matching “space” characters.)
+\S | Any character that is not a space, tab, or newline.
+
+```python
+>>> xmasRegex = re.compile(r'\d+\s\w+')
+>>> xmasRegex.findall('12 drummers, 11 pipers, 10 lords, 9 ladies, 8 maids, 7 swans, 6 geese, 5 rings, 4 birds, 3 hens, 2 doves, 1 partridge')
+['12 drummers', '11 pipers', '10 lords', '9 ladies', '8 maids', '7 swans', '6 geese', '5 rings', '4 birds', '3 hens', '2 doves', '1 partridge']
+```
+
+Making your own character classes.
+
+Example: the character class [aeiouAEIOU] will match any vowel.    
+Other example: the character class [a-zA-Z0-9] will match lowercase letters, uppercase letters, and numbers.   
+Inside a character class, you don't need to escape characters.  
+By placing a caret character (^) just after the character class’s opening bracket, you can make a negative character class. A negative character class will match all the characters that are not in the character class.
+
+Using the caret symbol (^) at the start of a regex indicates that a match must occur at the beginning of the searched text. Using a dollar sign ($) at the end of a regex indicates that a match must occur at the end of the searched text.
+
+The . (or dot) character in a regular expression is called a wildcard and will match any character except for a newline.
+
+A dot-star (.\*) matches everything. To make it non-greedy, add a question mark (.\*?).
+
+The dot-star will match everything, except a newline. By passing `re.DOTALL` as the second argument to the `re.compile()` method, the dot-star will now match all characters.
+
+**Summary**
+
+- The ? matches zero or one of the preceding group.
+- The * matches zero or more of the preceding group.
+- The + matches one or more of the preceding group.
+- The {n} matches exactly n of the preceding group.
+- The {n,} matches n or more of the preceding group.
+- The {,m} matches 0 to m of the preceding group.
+- The {n,m} matches at least n and at most m of the preceding group.
+- {n,m}? or *? or +? performs a non-greedy match of the preceding group.
+- ^spam means the string must begin with spam.
+- spam$ means the string must end with spam.
+- The . matches any character, except newline characters.
+- \d, \w, and \s match a digit, word, or space character, respectively.
+- \D, \W, and \S match anything except a digit, word, or space character, respectively.
+- [abc] matches any character between the brackets (such as a, b, or c).
+- [^abc] matches any character that isn’t between the brackets.
+
+To make regex case-insensitive, you can pass `re.IGNORECASE` or `re.I` as the second argument to the `re.compile()` method.
+
+Substituting strings with the `sub()` method.
+
+```python
+>>> namesRegex = re.compile(r'Agent \w+')
+>>> namesRegex.sub('CENSORED', 'Agent Alice gave the secret documents to Agent Bob.')
+'CENSORED gave the secret documents to CENSORED.'
+```
+
+```python
+“>>> agentNamesRegex = re.compile(r'Agent (\w)\w*')
+>>> agentNamesRegex.sub(r'\1****', 'Agent Alice told Agent Carol that Agent Eve knew Agent Bob was a double agent.')
+'A**** told C**** that E**** knew B**** was a double agent.'
+```
+
+By passing the variable `re.VERBOSE` as the second argument to `re.compile()` you are telling it to ignore whitespace and comments.
+
+Complex regex can be spread over multiple lines with comments.
