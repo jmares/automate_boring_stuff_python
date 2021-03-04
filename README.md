@@ -207,7 +207,7 @@ I spent more time on the *Table Printer* project than anticipated, so I skipped 
 
 ### Chapter 07: Pattern Matching with regular Expressions 
 
-Read March 2, 2021
+Read March 2-5, 2021
 
 Import the regular expresssion module
 
@@ -375,3 +375,10 @@ Substituting strings with the `sub()` method.
 By passing the variable `re.VERBOSE` as the second argument to `re.compile()` you are telling it to ignore whitespace and comments.
 
 Complex regex can be spread over multiple lines with comments.
+
+Even though `re.compile()` takes only a single value as its second argument, you can combine multiple values with the pipe character.
+
+```python
+someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
+```
+
