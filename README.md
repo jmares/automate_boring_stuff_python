@@ -382,3 +382,4 @@ Even though `re.compile()` takes only a single value as its second argument, you
 someRegexValue = re.compile('foo', re.IGNORECASE | re.DOTALL | re.VERBOSE)
 ```
 
+Didn't make any projects, because I didn't have the time for it. This is probably the 5th ot 6th time that I study regex in the past 25 years and I never had a use for it, so I always forgot. I can always revisit this chapter when needed.
