@@ -387,3 +387,36 @@ Didn't make any projects, because I didn't have the time for it. This is probabl
 ### Chapter 08: Input Validation
 
 Read March 6-7, 2021
+
+### Chapter 09: Reading and Writing Files
+
+Read March 8-, 2021
+
+```python
+from pathlib import Path
+```
+
+Current working directory: `Path.cwd()`
+
+To change directory: `os.chdir()`
+
+To make a directory with `os`: `os.mkdirs('C:\\delicious\\walnut\\waffles')`
+
+To make a directory with `pathlib`: Path(r'C:\delicious\walnut\waffles').mkdir()
+
+The difference between `os.mkdirs()` and `Path().mkdir()` is that the latter can only make 1 directory, while the former can make multiple (delicious, walnut, waffles).
+
+Path can be used to extract the different parts of a directory: achor, drive, parent (list of the directories int the path), name, stem and suffix.
+
+If you want to get the contents of a folder or the size of a file, you have to use `os`: `os.listdir(path)` and `os.path.getsize(path)`.
+
+For modifying a list of files, use the `glob()` method from `Path` instead of `os.listdir()`.
+
+Path objects have methods to check validity: `.exists()`, `.is_file()` and `.is_dir()`.
+
+In the chapter "Opening Files with the `open()` Function" I made a change to the code
+
+```python
+# helloFile = open(Path.home() / 'hello.txt')
+helloFile = open(Path.cwd() / 'hello.txt')
+```
