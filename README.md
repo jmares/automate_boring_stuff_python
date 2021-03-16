@@ -420,3 +420,34 @@ In the chapter "Opening Files with the `open()` Function" I made a change to the
 # helloFile = open(Path.home() / 'hello.txt')
 helloFile = open(Path.cwd() / 'hello.txt')
 ```
+
+### Chapter 10: Organizing Files
+
+Read March 16-??, 2021
+
+```python
+import shutil    # shell utilities module, to be used with the pathlib module
+```
+
+Copy a single file: `shutil.copy()`    
+Copy an entire folder with every subfolder and file in it: `shutil.coputree()`    
+Moving and renaming files and folders: `shutil.move()`    
+Delete the file at *path*: `os.unlink(path)`    
+Delete the **empty** folder at *path*: `os.rmdir(path)`   
+Delete the folder at *path* including all subfolders and files: `shutil.rmtree(path)`    
+
+The above mentioned delete method will irreversibly delete files and folders.
+
+The `send2trash` module will send files and folders to the computer's trash or recycle bin: `send2trash.send2trash()`
+
+Walking a directory tree with `os.walk()`:
+
+```python
+for foldername, subfolders, filenames in os.walk(path):
+    ...
+```
+
+Working with ZIP-files: the `zipfile` module
+
+A ZipFile object represents an entire archive file.    
+A ZipInfo object holds useful information about a single file in the archive.   
