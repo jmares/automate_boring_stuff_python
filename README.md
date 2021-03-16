@@ -390,7 +390,7 @@ Read March 6-7, 2021
 
 ### Chapter 09: Reading and Writing Files
 
-Read March 8-, 2021
+Read March 8-11, 2021
 
 ```python
 from pathlib import Path
@@ -420,6 +420,7 @@ In the chapter "Opening Files with the `open()` Function" I made a change to the
 # helloFile = open(Path.home() / 'hello.txt')
 helloFile = open(Path.cwd() / 'hello.txt')
 ```
+Needed some help with the Mad Libs project. Me and regular expressions still don't get along.
 
 ### Chapter 10: Organizing Files
 
