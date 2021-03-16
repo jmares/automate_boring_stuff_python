@@ -424,7 +424,7 @@ Needed some help with the Mad Libs project. Me and regular expressions still don
 
 ### Chapter 10: Organizing Files
 
-Read March 16-??, 2021
+Read March 16, 2021
 
 ```python
 import shutil    # shell utilities module, to be used with the pathlib module
@@ -452,3 +452,5 @@ Working with ZIP-files: the `zipfile` module
 
 A ZipFile object represents an entire archive file.    
 A ZipInfo object holds useful information about a single file in the archive.   
+
+Didn't make the practice projects, because I already have one: replace the bash scripts I currently use to backup sites and databases with a python script.
