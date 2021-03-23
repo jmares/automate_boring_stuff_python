@@ -454,3 +454,9 @@ A ZipFile object represents an entire archive file.
 A ZipInfo object holds useful information about a single file in the archive.   
 
 Didn't make the practice projects, because I already have one: replace the bash scripts I currently use to backup sites and databases with a python script.
+
+### Chapter 11: Debugging
+
+Read March 22- , 2021
+
+Not impressed by the traceback and assertions chapters.
