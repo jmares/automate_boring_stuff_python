@@ -464,3 +464,22 @@ Not impressed by the traceback and assertions chapters.
 ### Chapter 12: Web Scraping
 
 Modules: webbrowser, requests, bs4, selenium
+
+A more interesting and better worked out chapter than the previous one.
+
+However, there is this project called *downloading all XKCD comics*. 
+
+Not once it is mentioned that doing this can cause a serious load on the XKCD web server akin to a DOS.
+
+Did the author get XKCD's permission? Given XKCD's popularity I doubt that me downloading his entire archive in a dozen minutes would crash his server, but it is not a nice thing to do. But what if this book is used in a python course and a dozen students download the entire archive simultaneously?
+
+I have built in an extra condition so that only the first 10 images are downloaded. I have proof that the code works.
+
+```python
+count = 0
+while not url.endswith('#') and count < 10:
+    ...
+    count += 1
+```
+
+Another solution I intend to try out, is to run the script on my web server so it downloads one image from the archive every few minutes and stores the metadata (date and title) in a database (sqlite). And do the same for the *User Friendly* comic. 
