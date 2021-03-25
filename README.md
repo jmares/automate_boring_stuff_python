@@ -460,3 +460,7 @@ Didn't make the practice projects, because I already have one: replace the bash 
 Read March 22- , 2021
 
 Not impressed by the traceback and assertions chapters.
+
+### Chapter 12: Web Scraping
+
+Modules: webbrowser, requests, bs4, selenium
