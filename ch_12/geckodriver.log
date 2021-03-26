@@ -1,0 +1,20 @@
+1616769668046	geckodriver	INFO	Listening on 127.0.0.1:49664
+1616769668059	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/wg/vkfp6q7x5s15qx3_ym875_vc0000gn/T/rust_mozprofilexLwZj3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616769671008	Marionette	INFO	Listening on port 49673
+1616769671081	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+1616769703239	geckodriver	INFO	Listening on 127.0.0.1:49748
+1616769703253	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/wg/vkfp6q7x5s15qx3_ym875_vc0000gn/T/rust_mozprofileOi40zy"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616769706036	Marionette	INFO	Listening on port 49757
+1616769706088	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://inventwithpython.com/js/bootstrap.min.js, line 7: Error: Bootstrap tooltips require Tether (http://tether.io/)
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+1616769727072	Marionette	INFO	Stopped listening on port 49673
+1616769729849	Marionette	INFO	Stopped listening on port 49757

@@ -483,3 +483,15 @@ while not url.endswith('#') and count < 10:
 ```
 
 Another solution I intend to try out, is to run the script on my web server so it downloads one image from the archive every few minutes and stores the metadata (date and title) in a database (sqlite). And do the same for the *User Friendly* comic. 
+
+
+Had some trouble with the selenium chapter. Had to download the `geckodriver` first and then link to it.
+
+```python
+from selenium import webdriver
+browser = webdriver.Firefox(executable_path=r'/Users/myname/Downloads/geckodriver')
+browser.get('https://inventwithpython.com')
+```
+
+Speedread rest of the chapter, because I currently can't think of a use for it.
+

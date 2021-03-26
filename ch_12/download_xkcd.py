@@ -4,7 +4,7 @@ url = 'https://xkcd.com'
 os.makedirs('xkcd', exist_ok=True)
 count = 0
 
-while not url.endswith('#') and count <= 10:
+while not url.endswith('#') and count < 10:
     # Download the page
     print('Downloading from page %s ...' % url)
     res = requests.get(url)
