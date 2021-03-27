@@ -8,6 +8,8 @@ Started reading/studying this book on Februari 1, 2021.
 
 Exercises and notes from the book Automate the Boring Stuff with Python
 
+Download the code and files for this book: [https://nostarch.com/automatestuff2/](https://nostarch.com/automatestuff2/)
+
 ## PART I: Python Programming Basics
 
 ### Chapter 01: Python Basics
@@ -495,3 +497,18 @@ browser.get('https://inventwithpython.com')
 
 Speedread rest of the chapter, because I currently can't think of a use for it.
 
+### Chapter 13: Working with Excel Spreadsheets
+
+March 27-, 2021
+
+For this book you have to install an older version of openpyxl, namely version 2.6.2. The current version is 3.0.7.
+
+Even though I installed the required version, I got a different result in the chapter "Getting Cells from the Sheets"
+
+```python
+'Row %s, Column %s is %s' % (c.row, c.column, c.value)
+'Row 1, Column B is Apples'     # result from the book
+'Row 1, Column 2 is Apples'     # the result I got
+```
+
+Remember the dictionary method `setdefault()`. Sometimes it is easier than using the `get()` method.
