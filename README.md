@@ -512,3 +512,9 @@ Even though I installed the required version, I got a different result in the ch
 ```
 
 Remember the dictionary method `setdefault()`. Sometimes it is easier than using the `get()` method.
+
+### Chapter 14: Working with Google Sheets
+
+March 30, 2021
+
+I had no idea what I was doing, the text and screenhots from the book didn't correspond to the Google developer pages. A whole lot more information was asked and I had no idea what to answer. So, I skipped this chapter.
