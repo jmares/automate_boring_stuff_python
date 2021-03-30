@@ -499,7 +499,7 @@ Speedread rest of the chapter, because I currently can't think of a use for it.
 
 ### Chapter 13: Working with Excel Spreadsheets
 
-March 27-, 2021
+March 27-30, 2021
 
 For this book you have to install an older version of openpyxl, namely version 2.6.2. The current version is 3.0.7.
 
