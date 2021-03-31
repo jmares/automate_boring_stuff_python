@@ -518,3 +518,13 @@ Remember the dictionary method `setdefault()`. Sometimes it is easier than using
 March 30, 2021
 
 I had no idea what I was doing, the text and screenhots from the book didn't correspond to the Google developer pages. A whole lot more information was asked and I had no idea what to answer. So, I skipped this chapter.
+
+### Chapter 15: Working with PDF and Word Documents
+
+March 31, 2021
+
+Thought I could have some creating PDFs, but you can only copy content from other PDFs and manipulate that, not add content of your own like text, images and charts. No fun, not useful. Skipped this part.
+
+The Word part was better, but I can't think of a use for it so I want through it quickly.
+
+This book is good, but not in the same league as the *Python Crash Course* and I feel like I have already spend to much time on this book. Still there are some (potential) interesting chapters ahead.
