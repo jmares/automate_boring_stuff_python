@@ -528,3 +528,11 @@ Thought I could have some creating PDFs, but you can only copy content from othe
 The Word part was better, but I can't think of a use for it so I want through it quickly.
 
 This book is good, but not in the same league as the *Python Crash Course* and I feel like I have already spend to much time on this book. Still there are some (potential) interesting chapters ahead.
+
+### Chapter 16: Working with CSV Files and JSON Data
+
+April 1, 2021
+
+The CSV example project is to remove the header from csv files, without checking if there even is a header.
+
+For the example JSON project, you have to sign up for an API key. I have been working with JSON COVID19 data a lot lately without hving to sign up for a key, so I skipped this part.
