@@ -536,3 +536,7 @@ April 1, 2021
 The CSV example project is to remove the header from csv files, without checking if there even is a header.
 
 For the example JSON project, you have to sign up for an API key. I have been working with JSON COVID19 data a lot lately without hving to sign up for a key, so I skipped this part.
+
+### Chapter 17: Keeping Time, Scheduling Tasks, and Launching Programs
+
+April 3, 2021
