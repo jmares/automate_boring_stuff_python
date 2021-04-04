@@ -1,10 +1,12 @@
-import requests, os, bs4
+import requests, os, bs4, time 
 
 url = 'https://xkcd.com'
 os.makedirs('xkcd', exist_ok=True)
 count = 0
 
-while not url.endswith('#') and count < 10:
+start_time = time.time()
+
+while not url.endswith('#') and count <= 125:
     # Download the page
     print('Downloading from page %s ...' % url)
     res = requests.get(url)
@@ -30,5 +32,9 @@ while not url.endswith('#') and count < 10:
     url = 'https://xkcd.com' + prevlink.get('href')
     count += 1
     
+end_time = time.time()
 
 print('Done')
+
+print('It took %s seconds to download 125 XKCD comics (threaded)'  
+    % (round(end_time - start_time, 2)))

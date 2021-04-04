@@ -539,4 +539,8 @@ For the example JSON project, you have to sign up for an API key. I have been wo
 
 ### Chapter 17: Keeping Time, Scheduling Tasks, and Launching Programs
 
-April 3, 2021
+April 3-4, 2021
+
+Very interesting chapter. Never done any threading before.
+
+I compared the threaded versus the non-threaded download of an equal amount of XKCD comics (125): 114 seconds for the non-threaded downloads versus 11 seconds for the threaded downloads.
