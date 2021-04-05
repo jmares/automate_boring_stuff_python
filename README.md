@@ -544,3 +544,21 @@ April 3-4, 2021
 Very interesting chapter. Never done any threading before.
 
 I compared the threaded versus the non-threaded download of an equal amount of XKCD comics (125): 114 seconds for the non-threaded downloads versus 11 seconds for the threaded downloads.
+
+### Chapter 18: Sending Email and Text Messages
+
+It looks so easy:
+
+>Before you write code, you must first sign up for a Gmail email account at https://gmail.com/. Then, go to https://developers.google.com/gmail/api/quickstart/python/, click the Enable the Gmail API button on that page, and fill out the form that appears.
+After you’ve filled out the form, the page will present a link to the credentials.json file,...
+
+Apparently a lot has changed since the book was written two years ago, as I never saw a **Enable the GMAIL API** button. After clicking through lots of pages and forms not knowing what to fill in, I gave up after 45 minutes.
+
+SMTP chapter was better, but you have to create an app specific password for Gmail.
+
+IMAP chapter contains an error:
+
+```python
+UIDs = imapObj.search(['SINCE 01-Jan-2021']) # doesn't work
+UIDs = imapObj.search(b'SINCE 01-Jan-2021')  # works
+```
