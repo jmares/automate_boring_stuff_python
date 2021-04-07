@@ -562,3 +562,16 @@ IMAP chapter contains an error:
 UIDs = imapObj.search(['SINCE 01-Jan-2021']) # doesn't work
 UIDs = imapObj.search(b'SINCE 01-Jan-2021')  # works
 ```
+
+### Chapter 19: Manipulating Images
+
+April 7-8, 2021
+
+There is an error in the *Adding a Logo* project, namely that the logo is larger than the images your are trying to add it to. My solution: divide width and height of the logo by 10.
+
+```python
+logo_orig = Image.open(LOGO_FILENAME)
+logo_img = logo_orig.resize((81, 77))
+logo_width, logo_height = logo_img.size
+
+```
