@@ -581,4 +581,4 @@ April 12-, 2021
 
 Installed `pyautogui` without problems on macOS Big Sur, but importing it in a script created a lot of error messages.
 
-Switched to Windows 10 where it works without problems.
+Switched to Windows 10 where it works without problems.cd ..
