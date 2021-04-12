@@ -573,5 +573,8 @@ There is an error in the *Adding a Logo* project, namely that the logo is larger
 logo_orig = Image.open(LOGO_FILENAME)
 logo_img = logo_orig.resize((81, 77))
 logo_width, logo_height = logo_img.size
-
 ```
+
+### Chapter 20: Controlling the Keyboard and Mouse with GUI Automation
+
+April 12-, 2021
