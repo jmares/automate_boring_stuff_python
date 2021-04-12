@@ -578,3 +578,7 @@ logo_width, logo_height = logo_img.size
 ### Chapter 20: Controlling the Keyboard and Mouse with GUI Automation
 
 April 12-, 2021
+
+Installed `pyautogui` without problems on macOS Big Sur, but importing it in a script created a lot of error messages.
+
+Switched to Windows 10 where it works without problems.
